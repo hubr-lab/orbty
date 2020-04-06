@@ -49,7 +49,7 @@ orbty.get("/", (req, res) => {
 Set HTTP response status:
 ```js
 orbty.get("/posts/:id", ({ params }) => {
-  if (params.id === 1) {
+  if (params.id === "1") {
     return "found";
   }
 
@@ -70,7 +70,7 @@ class NotFound extends Orbty.HttpException {
 Use:
 ```js
 orbty.get("/posts/:id", ({ params }) => {
-  if (params.id === 1) {
+  if (params.id === "1") {
     return "found";
   }
 
@@ -80,7 +80,7 @@ orbty.get("/posts/:id", ({ params }) => {
 Or use single response:
 ```js
 orbty.get("/posts/:id", ({ params }, res) => {
-  if (params.id === 1) {
+  if (params.id === "1") {
     return "found";
   }
 
