@@ -88,4 +88,11 @@ orbty.get("/posts/:id", ({ params }, res) => {
 });
 ```
 
+Capture error handlers:
+```js
+orbty.error((error, req, res) => {
+  console.error(error);
+});
+```
+
 
