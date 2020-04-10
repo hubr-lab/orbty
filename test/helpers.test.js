@@ -1,5 +1,5 @@
 const { isOnlyNumber } = require("../lib/helpers/values");
-const { getBasePath } = require("../lib/helpers/url");
+const { getBasePath, getPathRegex, normalizeBasePath  } = require("../lib/helpers/url");
 
 describe("Helpers", () => {
 	describe("values", () => {
@@ -23,6 +23,14 @@ describe("Helpers", () => {
 			expect(getBasePath("user")).toBe("/user");
 			expect(getBasePath("/")).toBe("/");
 			expect(getBasePath("")).toBe("/");
+		});
+
+		test("normalizeBasePath", () => {
+			expect(normalizeBasePath("")).toBe("/");
+			expect(normalizeBasePath("users")).toBe("/users");
+			expect(normalizeBasePath("/users")).toBe("/users");
+			expect(normalizeBasePath("/users/posts/summer")).toBe("/users/posts/summer");
+			expect(normalizeBasePath("users/posts/summer?day=1")).toBe("/users/posts/summer?day=1");
 		});
 	});
 });
