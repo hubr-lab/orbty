@@ -5,3 +5,4 @@ coverage
 *.lock
 *.log
 .editorconfig
+package-lock.json
