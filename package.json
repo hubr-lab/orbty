@@ -3,7 +3,7 @@
     "name": "Gleisson Ricardo",
     "email": "contato.mattos@outlook.com"
   },
-  "version": "0.5.9",
+  "version": "0.6.0",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
