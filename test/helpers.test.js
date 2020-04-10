@@ -32,5 +32,35 @@ describe("Helpers", () => {
 			expect(normalizeBasePath("/users/posts/summer")).toBe("/users/posts/summer");
 			expect(normalizeBasePath("users/posts/summer?day=1")).toBe("/users/posts/summer?day=1");
 		});
+
+		test("getPathRegex", () => {
+			let regex = getPathRegex("/user/posts/:postId");
+			expect("/user/posts/245").toMatch(regex.pattern);
+			expect(regex.keys).toContain("postId");
+			expect("/user/posts/").not.toMatch(regex.pattern);
+
+			regex = getPathRegex("/user/posts");
+			expect("/user/posts").toMatch(regex.pattern);
+			expect(regex.keys).toHaveLength(0)
+			expect("/user/post").not.toMatch(regex.pattern);
+
+			regex = getPathRegex("/user/:userId/photos/:photoId");
+			expect("/user/2/photos/12-home").toMatch(regex.pattern);
+			expect(regex.keys).toHaveLength(2);
+			expect(regex.keys).toContain("userId");
+			expect(regex.keys).toContain("photoId");
+			expect("/users/1/photos/2").not.toMatch(regex.pattern);
+			expect("/user/photos/3").not.toMatch(regex.pattern);
+
+			regex = getPathRegex("/user");
+			expect("/user").toMatch(regex.pattern);
+			expect(regex.keys).toHaveLength(0);
+			expect("/").not.toMatch(regex.pattern);
+
+			regex = getPathRegex("/");
+			expect("/").toMatch(regex.pattern);
+			expect(regex.keys).toHaveLength(0);
+			expect("/user/post").not.toMatch(regex.pattern);
+		});
 	});
 });
