@@ -6,10 +6,12 @@
   "version": "0.5.9",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest --setupFiles dotenv/config"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "jest": "^25.3.0"
   },
   "engine": {
     "node": ">=10.0.0"
