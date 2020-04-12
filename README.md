@@ -95,4 +95,15 @@ orbty.error((error, req, res) => {
 });
 ```
 
+## TODO
 
+- Parse error optional.
+- Improve sender.
+- Implements general options.
+- Improve streaming.
+- Improve file download.
+- Improve redirect.
+- Improve HTTP server patterns.
+- Implements tests.
+- Add examples.
+- Improve documentations.
