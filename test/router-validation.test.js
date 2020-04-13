@@ -11,13 +11,6 @@ const Orbty = require("../index");
 
 describe("routers", () =>{
 	describe("create", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).create(null, "/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -30,13 +23,6 @@ describe("routers", () =>{
 	});
 
 	describe("post", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).post("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -49,13 +35,6 @@ describe("routers", () =>{
 	});
 
 	describe("get", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).get("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -68,13 +47,6 @@ describe("routers", () =>{
 	});
 
 	describe("put", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).put("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -87,13 +59,6 @@ describe("routers", () =>{
 	});
 
 	describe("delete", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).delete("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -106,13 +71,6 @@ describe("routers", () =>{
 	});
 
 	describe("options", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).options("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -125,13 +83,6 @@ describe("routers", () =>{
 	});
 
 	describe("head", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).head("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -144,13 +95,6 @@ describe("routers", () =>{
 	});
 
 	describe("patch", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).patch("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -163,13 +107,6 @@ describe("routers", () =>{
 	});
 
 	describe("connect", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).connect("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -182,13 +119,6 @@ describe("routers", () =>{
 	});
 
 	describe("trace", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).trace("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -201,13 +131,6 @@ describe("routers", () =>{
 	});
 
 	describe("checkout", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).checkout("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -220,13 +143,6 @@ describe("routers", () =>{
 	});
 
 	describe("copy", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).copy("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -239,13 +155,6 @@ describe("routers", () =>{
 	});
 
 	describe("lock", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).lock("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -258,13 +167,6 @@ describe("routers", () =>{
 	});
 
 	describe("merge", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).merge("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -277,13 +179,6 @@ describe("routers", () =>{
 	});
 
 	describe("mkactivity", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).mkactivity("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -296,13 +191,6 @@ describe("routers", () =>{
 	});
 
 	describe("mkcol", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).mkcol("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -315,13 +203,6 @@ describe("routers", () =>{
 	});
 
 	describe("move", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).move("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -334,13 +215,6 @@ describe("routers", () =>{
 	});
 
 	describe("m-search", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty())["m-search"]("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -353,13 +227,6 @@ describe("routers", () =>{
 	});
 
 	describe("notify", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).notify("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -372,13 +239,6 @@ describe("routers", () =>{
 	});
 
 	describe("propfind", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).propfind("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -391,13 +251,6 @@ describe("routers", () =>{
 	});
 
 	describe("proppatch", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).proppatch("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -410,13 +263,6 @@ describe("routers", () =>{
 	});
 
 	describe("purge", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).purge("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -429,13 +275,6 @@ describe("routers", () =>{
 	});
 
 	describe("report", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).report("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -448,13 +287,6 @@ describe("routers", () =>{
 	});
 
 	describe("search", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).search("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -467,13 +299,6 @@ describe("routers", () =>{
 	});
 
 	describe("subscribe", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).subscribe("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -486,13 +311,6 @@ describe("routers", () =>{
 	});
 
 	describe("unlock", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).unlock("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -505,13 +323,6 @@ describe("routers", () =>{
 	});
 
 	describe("unsubscribe", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).unsubscribe("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
@@ -524,13 +335,6 @@ describe("routers", () =>{
 	});
 
 	describe("all", () => {
-
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).all("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-
 		test("Should error case path cannot be string or RegExp", () => {
 			const orbty = new Orbty();
 
