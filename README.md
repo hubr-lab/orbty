@@ -14,6 +14,14 @@ orbty.listen(8080)
 
 ```
 
+## Installation
+
+Installation is easy with the [npm](https://www.npmjs.com) command
+
+```bash
+$ npm install orbty
+```
+
 ## Examples
 
 Define how the data will be sent in the response.
@@ -123,16 +131,3 @@ console.log(env.ENVIRONMENT);
 // An error will be thrown if this variable has not been defined.
 
 ```
-
-## TODO
-
-- Parse error optional.
-- Improve sender.
-- Implements general options.
-- Improve streaming.
-- Improve file download.
-- Improve redirect.
-- Improve HTTP server patterns.
-- Implements tests.
-- Add examples.
-- Improve documentations.

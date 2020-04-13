@@ -1,20 +1,54 @@
 {
+  "name": "orbty",
+  "version": "0.6.1",
+  "description": "Simple and high performance web server structure for",
   "author": {
     "name": "Gleisson Ricardo",
     "email": "contato.mattos@outlook.com"
   },
-  "version": "0.6.1",
+  "main": "index.js",
+  "readmeFilename": "README.md",
   "license": "MIT",
+  "repository": "hubr-lab/orbty",
   "scripts": {
     "lint": "eslint .",
     "test": "jest"
   },
+  "keywords": [
+    "orbty",
+    "web",
+    "api",
+    "rest",
+    "router",
+    "restful",
+    "server",
+    "microservice",
+    "framework",
+    "backend",
+    "hubr"
+  ],
+  "tags": [
+    "orbty",
+    "web",
+    "api",
+    "hook-api",
+    "rest",
+    "router",
+    "restful",
+    "server",
+    "microservice"
+  ],
+  "files": [
+    "index.js",
+    "src/",
+    "README.md"
+  ],
   "devDependencies": {
     "eslint": "^6.8.0",
     "jest": "^25.3.0"
   },
   "engine": {
-    "node": ">=10.0.0"
+    "node": ">=12.0.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
