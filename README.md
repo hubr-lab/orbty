@@ -95,6 +95,33 @@ orbty.error((error, req, res) => {
 });
 ```
 
+### Middlewares
+
+Orbty is compatible with all your favorite express middalawares and the syntax is the same. We decided to keep the same syntax for its familiarity and simplicity.
+
+```js
+const Orbty = require("orbty");
+const middleware = require("my-middleware");
+
+orbty.use(middleware);
+
+// ...
+```
+
+### Util
+
+#### Environment control
+
+
+Read your environment variables using the env static method. It will validate the mandatory variables and will not let your application start if a specific mandatory variable has not been defined.
+
+```js
+const { env } = require("orbty");
+console.log(env.ENVIRONMENT);
+// An error will be thrown if this variable has not been defined.
+
+```
+
 ## TODO
 
 - Parse error optional.
