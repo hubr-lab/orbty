@@ -1,6 +1,6 @@
 orbty
 ============
-Simple and high performance web server structure.
+Simple and high performance web server structure for building scalable, practical and fast server applications.
 
 ```js
 const Orbty = require('orbty');
