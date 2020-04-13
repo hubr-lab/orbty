@@ -103,6 +103,8 @@ Orbty is compatible with all your favorite express middalawares and the syntax i
 const Orbty = require("orbty");
 const middleware = require("my-middleware");
 
+const orbty = new Orbty();
+
 orbty.use(middleware);
 
 // ...
