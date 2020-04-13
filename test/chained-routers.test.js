@@ -10,6 +10,16 @@
 const Orbty = require("../index");
 
 describe("routers", () =>{
+
+    describe("use", () => {
+
+		test("Should correct Orbty encaded instance", () => {
+			expect(
+				((new Orbty()).use("/", () => {})) instanceof Orbty
+			).toBeTruthy();
+		});
+	});
+
 	describe("create", () => {
 
 		test("Should correct Orbty encaded instance", () => {
