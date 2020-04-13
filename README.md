@@ -95,7 +95,7 @@ orbty.error((error, req, res) => {
 });
 ```
 
-### Middlewares
+## Middlewares
 
 Orbty is compatible with all your favorite express middalawares and the syntax is the same. We decided to keep the same syntax for its familiarity and simplicity.
 
@@ -110,9 +110,9 @@ orbty.use(middleware);
 // ...
 ```
 
-### Util
+## Util
 
-#### Environment control
+### Environment control
 
 
 Read your environment variables using the env static method. It will validate the mandatory variables and will not let your application start if a specific mandatory variable has not been defined.
