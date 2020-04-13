@@ -1,6 +1,6 @@
 {
   "name": "orbty",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Simple and high performance web server structure for",
   "author": {
     "name": "Gleisson Ricardo",
@@ -40,7 +40,7 @@
   ],
   "files": [
     "index.js",
-    "src/",
+    "lib/",
     "README.md"
   ],
   "devDependencies": {
