@@ -118,6 +118,37 @@ orbty.use(middleware);
 // ...
 ```
 
+The body-parser middleware already integrated with Orbty.
+
+```js
+const Orbty = require("orbty");
+const orbty = new Orbty();
+
+orbty.post("/posts", Orbty.json({ extended: true }), ({ body }) => {
+  return body;
+});
+
+orbty.post("/posts/comment", Orbty.text(), ({ body }) => {
+  return body;
+});
+
+// ...
+```
+
+### Static files
+
+Send static files through your api. Orbty contains a middleware that solves this easily:
+
+```js
+const Orbty = require("orbty");
+const orbty = new Orbty();
+
+orbty.use(Orbty.static(`${__dirname}/media`));
+orbty.use(Orbty.static(`${__dirname}/photos`));
+
+// ...
+```
+
 ## Util
 
 ### Environment control
@@ -131,3 +162,24 @@ console.log(env.ENVIRONMENT);
 // An error will be thrown if this variable has not been defined.
 
 ```
+
+## Orbty instancies
+
+An Orbty instance acts as a router.
+
+```js
+const Orbty = require("orbty");
+
+const orbty = new Orbty();
+const orbtyV2 = new Orbty();
+
+orbtyV2.get("/", () => "This is v2 API");
+
+orbty.use("/v2", orbtyV2);
+
+```
+
+## TODO
+
+- Improve documentations on external page
+- Improve stream
