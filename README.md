@@ -69,9 +69,10 @@ Create your own errors with your own status codes. Set ```code``` attribute with
 
 ```js
 class NotFound extends Orbty.HttpException {
-  constructor() {
+  constructor(message) {
     super();
     this.code = 404;
+    this.message = message;
   }
 }
 ```
