@@ -179,6 +179,29 @@ orbty.use("/v2", orbtyV2);
 
 ```
 
+## Https
+Use Orbty with https and others http protocols:
+```js
+const https = require("https");
+const Orbty = require("orbty");
+const fs = require("fs");
+
+const orbty = new Orbty();
+
+orbty.get("/", () => {
+  return "this secure server";
+})
+
+// Node JS native documentation
+const options = {
+  key: fs.readFileSync("secury.pem"),
+  cert: fs.readFileSync("secury-cert.cert")
+};
+
+https.createServer(options, orbty.server()).listen(443);
+
+```
+
 ## TODO
 
 - Improve documentations on external page
