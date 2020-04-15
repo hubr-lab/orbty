@@ -70,6 +70,12 @@ describe("Helpers", () => {
 			expect("/").toMatch(regex.pattern);
 			expect(regex.keys).toHaveLength(0);
 			expect("/user/post").not.toMatch(regex.pattern);
+
+			regex = getPathRegex(new RegExp(/\w+/));
+			expect("/any-here").toMatch(regex.pattern);
+
+			regex = getPathRegex("*");
+			expect("/all-here").toMatch(regex.pattern);
 		});
 	});
 });
