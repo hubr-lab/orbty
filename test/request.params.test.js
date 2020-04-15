@@ -2,32 +2,32 @@ const Orbty = require("..");
 const request = require("supertest");
 const faker = require("faker");
 
-describe("Request query parser", () => {
-	test("Should response parsed url query", (done) => {
+describe("Request params", () => {
+	test("Should response parsed params", (done) => {
 		const orbty = new Orbty();
-		const name = faker.name.firstName();
+		const word = faker.name.firstName();
 		const number = faker.random.number({ min: 1, max: 100});
 
-		orbty.get("/foo", ({ query }) => {
-			return query;
+		orbty.get("/foo/:bar/:tum", ({ params }) => {
+			return params;
 		});
 
 		request(orbty.server())
 			.get(
-				`/foo?name=${name}&num=${number}`
+				`/foo/${word}/${number}`
 			).expect(200, (err, { body }) => {
 				expect(err).toBeNull();
-				expect(body.name).toBe(name);
-				expect(body.num).toBe(String(number));
+				expect(body.bar).toBe(word);
+				expect(body.tum).toBe(String(number));
 				done();
 			});
 	});
 
-	test("Should response empty query object", (done) => {
+	test("Should response empty params object", (done) => {
 		const orbty = new Orbty();
 
-		orbty.get("/foo", ({ query }) => {
-			return query;
+		orbty.get("/foo", ({ params }) => {
+			return params;
 		});
 
 		request(orbty.server())
