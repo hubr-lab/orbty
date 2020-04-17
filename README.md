@@ -22,6 +22,20 @@ Installation is easy with the [npm](https://www.npmjs.com) command
 $ npm install orbty
 ```
 
+## Current features
+
+- High test coverage.
+- Middlewares support.
+- Compatible with express middleware.
+- Automatic HTTP error handler.
+- Integrated body-parser.
+- Dynamic url.
+- High performance.
+- Static files.
+- Support routing by instance.
+- Compatible with your native server. (HTTP, HTTP's).
+
+
 ## Examples
 
 Define how the data will be sent in the response.
