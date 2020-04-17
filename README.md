@@ -3,7 +3,7 @@ orbty
 Simple and high performance web server structure for building scalable, practical and fast server applications.
 
 ```js
-const Orbty = require('orbty');
+const Orbty = require("orbty");
 orbty = new Orbty();
 
 orbty.get("/welcome", ({ query }) => {
@@ -28,8 +28,9 @@ Define how the data will be sent in the response.
 
 ### Basic
 ```js
+
 // use simple function return
-orbty.post("/post/:id", ({ body, params }) => {
+orbty.post("/post/:id", Orbty.json(), ({ body, params }) => {
   return {
     id: params.id,
     content: body.content
@@ -70,9 +71,7 @@ Create your own errors with your own status codes. Set ```code``` attribute with
 ```js
 class NotFound extends Orbty.HttpException {
   constructor(message) {
-    super();
-    this.code = 404;
-    this.message = message;
+    super(message, 404);
   }
 }
 ```
