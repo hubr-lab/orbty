@@ -106,7 +106,7 @@ orbty.error((error, req, res) => {
 
 ## Middlewares
 
-Orbty is compatible with all your favorite express middalawares and the syntax is the same. We decided to keep the same syntax for its familiarity and simplicity.
+Orbty is compatible with all your favorite express middleware and the syntax is the same. We decided to keep the same syntax for its familiarity and simplicity.
 
 ```js
 const Orbty = require("orbty");
@@ -149,6 +149,11 @@ orbty.use(Orbty.static(`${__dirname}/photos`));
 
 // ...
 ```
+
+## Cache
+
+We currently have a separate Cache management module for Orbty and also compatible with Express.
+Check [orbty-http-cache](https://www.npmjs.com/package/orbty-http-cache).
 
 ## Util
 
