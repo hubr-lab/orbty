@@ -3,21 +3,21 @@ const request = require("supertest");
 
 describe("Response redirect", () => {
   test("Should returns json object with correct header", (done) => {
-		const orbty = new Orbty();
+    const orbty = new Orbty();
 
-		orbty.get("/target", (_req, res) => {
+    orbty.get("/target", (_req, res) => {
       res.redirect("http://google.com");
-		});
+    });
 
-		orbty.get("/foo", (_req, res) => {
+    orbty.get("/foo", (_req, res) => {
       res.redirect("/target");
     });
 
-		request(orbty.server())
-			.get("/foo")
-			.expect(301, (err, res) => {
-				expect(err).toBeNull();
-				done();
-			});
-	});
+    request(orbty.server())
+      .get("/foo")
+      .expect(301, (err) => {
+        expect(err).toBeNull();
+        done();
+      });
+  });
 });

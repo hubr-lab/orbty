@@ -1,4 +1,4 @@
-/*!
+/* !
 * orbty
 * Copyright(c) 2020 Gleisson Mattos
 * http://github.com/gleissonmattos
@@ -11,264 +11,264 @@ const Orbty = require("../index");
 
 describe("routers", () =>{
 
-    describe("use", () => {
+  describe("use", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).use("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).use("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("create", () => {
+  describe("create", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).create(null, "/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).create(null, "/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("post", () => {
+  describe("post", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).post("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).post("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("get", () => {
+  describe("get", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).get("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).get("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("put", () => {
+  describe("put", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).put("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).put("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("delete", () => {
+  describe("delete", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).delete("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).delete("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("options", () => {
+  describe("options", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).options("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).options("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("head", () => {
+  describe("head", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).head("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).head("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("patch", () => {
+  describe("patch", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).patch("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).patch("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("connect", () => {
+  describe("connect", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).connect("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).connect("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("trace", () => {
+  describe("trace", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).trace("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).trace("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("checkout", () => {
+  describe("checkout", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).checkout("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).checkout("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("copy", () => {
+  describe("copy", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).copy("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).copy("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("lock", () => {
+  describe("lock", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).lock("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).lock("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("merge", () => {
+  describe("merge", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).merge("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).merge("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("mkactivity", () => {
+  describe("mkactivity", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).mkactivity("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).mkactivity("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("mkcol", () => {
+  describe("mkcol", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).mkcol("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).mkcol("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("move", () => {
+  describe("move", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).move("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).move("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("m-search", () => {
+  describe("m-search", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty())["m-search"]("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty())["m-search"]("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("notify", () => {
+  describe("notify", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).notify("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).notify("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("propfind", () => {
+  describe("propfind", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).propfind("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).propfind("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("proppatch", () => {
+  describe("proppatch", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).proppatch("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).proppatch("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("purge", () => {
+  describe("purge", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).purge("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).purge("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("report", () => {
+  describe("report", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).report("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).report("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("search", () => {
+  describe("search", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).search("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).search("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("subscribe", () => {
+  describe("subscribe", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).subscribe("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).subscribe("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("unlock", () => {
+  describe("unlock", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).unlock("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).unlock("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("unsubscribe", () => {
+  describe("unsubscribe", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).unsubscribe("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).unsubscribe("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 
-	describe("all", () => {
+  describe("all", () => {
 
-		test("Should correct Orbty encaded instance", () => {
-			expect(
-				((new Orbty()).all("/", () => {})) instanceof Orbty
-			).toBeTruthy();
-		});
-	});
+    test("Should correct Orbty encaded instance", () => {
+      expect(
+        ((new Orbty()).all("/", () => {})) instanceof Orbty
+      ).toBeTruthy();
+    });
+  });
 });

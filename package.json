@@ -12,7 +12,8 @@
   "repository": "hubr-lab/orbty",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "lint:fix": "eslint --fix ."
   },
   "keywords": [
     "orbty",

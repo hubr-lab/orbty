@@ -4,32 +4,32 @@ const request = require("supertest");
 describe("Request current time", () => {
 
   test("Should current type diff number", (done) => {
-		const orbty = new Orbty();
+    const orbty = new Orbty();
 
-		orbty.get("/foo", (req) => {
-			return req.getCurrentRequestTime();
-		});
+    orbty.get("/foo", (req) => {
+      return req.getCurrentRequestTime();
+    });
 
-		request(orbty.server())
-			.get("/foo")
-			.expect(200, (err, { text }) => {
-				expect(err).toBeNull();
-				expect(Number(text) >= 0).toBeTruthy();
-				done();
-			});
-	});
+    request(orbty.server())
+      .get("/foo")
+      .expect(200, (err, { text }) => {
+        expect(err).toBeNull();
+        expect(Number(text) >= 0).toBeTruthy();
+        done();
+      });
+  });
 
-	test("Should returns initial request time", (done) => {
-		const orbty = new Orbty();
+  test("Should returns initial request time", (done) => {
+    const orbty = new Orbty();
 
-		orbty.get("/foo", (req) => req.initialTime);
+    orbty.get("/foo", (req) => req.initialTime);
 
-		request(orbty.server())
-			.get("/foo")
-			.expect(200, (err, { text }) => {
-				expect(err).toBeNull();
-				expect(Number(text) >= 0).toBeTruthy();
-				done();
-			});
-	});
+    request(orbty.server())
+      .get("/foo")
+      .expect(200, (err, { text }) => {
+        expect(err).toBeNull();
+        expect(Number(text) >= 0).toBeTruthy();
+        done();
+      });
+  });
 });
