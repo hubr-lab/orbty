@@ -33,7 +33,7 @@ $ npm install orbty
 - High performance.
 - Static files.
 - Support routing by instance.
-- Compatible with your native server. (HTTP, HTTP's).
+- Compatible with your native server. (HTTP, HTTPS).
 
 
 ## Examples
