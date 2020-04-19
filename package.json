@@ -1,6 +1,6 @@
 {
   "name": "orbty",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Simple and high performance web server structure for",
   "author": {
     "name": "Gleisson Ricardo",
@@ -43,7 +43,9 @@
   "files": [
     "index.js",
     "lib/",
-    "README.md"
+    "README.md",
+    "index.d.ts",
+    "tsconfig.json"
   ],
   "devDependencies": {
     "eslint": "^6.8.0",
