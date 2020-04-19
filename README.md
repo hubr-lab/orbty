@@ -26,6 +26,7 @@ $ npm install orbty
 
 - High test coverage.
 - Middlewares support.
+- Compatible with Typescript.
 - Compatible with express middleware.
 - Automatic HTTP error handler.
 - Integrated body-parser.

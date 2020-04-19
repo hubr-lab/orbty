@@ -1,12 +1,13 @@
 {
   "name": "orbty",
-  "version": "0.7.7",
+  "version": "0.8.0",
   "description": "Simple and high performance web server structure for",
   "author": {
     "name": "Gleisson Ricardo",
     "email": "contato.mattos@outlook.com"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "readmeFilename": "README.md",
   "license": "MIT",
   "repository": "hubr-lab/orbty",
