@@ -7,7 +7,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 import { urlencoded, json, raw, text } from "body-parser";
-import serveStatic = require("serve-static");
+import serveStatic from "serve-static";
 import http from "http";
 import url from "url";
 
