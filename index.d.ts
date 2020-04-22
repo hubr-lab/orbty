@@ -11,17 +11,17 @@ import serveStatic from "serve-static";
 import http from "http";
 import url from "url";
 
-interface Environment {
+interface IEnvironment {
   [key: string]: string;
 }
 
-interface Next {
+interface INext {
   (): void;
 }
 
 type ParamsArray = string[];
 
-interface ParamsFormat {
+interface IParamsFormat {
   [key: string]: string;
 }
 
@@ -39,21 +39,12 @@ interface ListenOptions {
   ipv6Only?: boolean;
 }
 
-declare type Sender<ResponseBody = any, T = Response<ResponseBody>> = (responseContent?: ResponseBody) => T;
-type RouteParams = ParamsFormat | ParamsArray;
+declare type ISender<ResponseBody = any, T = IResponse<ResponseBody>> = (responseContent?: ResponseBody) => T;
+type RouteParams = IParamsFormat | ParamsArray;
 
-declare class HttpException {
-
-  name: string;
-  code: number;
-  message: string;
-
-  constructor(message: string, statusCode: number);
-}
-
-declare class Request<P extends RouteParams = ParamsFormat, RequestBody = any, RequestQuery = any> extends http.IncomingMessage {
+declare interface IRequest<P extends RouteParams = IParamsFormat, IRequestBody = any, IRequestQuery = any> extends http.IncomingMessage {
   getUrlParser(): url.UrlWithParsedQuery;
-  getCurrentRequestTime(): number;
+  getCurrentIRequestTime(): number;
   initialTime: number;
   header(headerName: string): string | string[] | undefined;
   host: string;
@@ -61,72 +52,72 @@ declare class Request<P extends RouteParams = ParamsFormat, RequestBody = any, R
   accept: string;
   agent: string;
   params: P;
-  body: RequestBody;
-  query: RequestQuery;
+  body: IRequestBody;
+  query: IRequestQuery;
 }
 
-declare class Response<ResponseBody = any> extends http.ServerResponse {
+declare interface IResponse<ResponseBody = any> extends http.ServerResponse {
   status(code: number): this;
-  json: Sender<ResponseBody>;
-  plain: Sender<ResponseBody>;
+  json: ISender<ResponseBody>;
+  plain: ISender<ResponseBody>;
   sendStatus(code: number | string): this;
   redirect(url: string): this;
   hasContentType(): boolean;
-  send: Sender<ResponseBody>;
+  send: ISender<ResponseBody>;
   error(error: Error): this;
   stream(filePath: string): this;
 }
 
-interface Handler<P extends RouteParams = ParamsFormat, ResponseBody = any, RequestBody = any, RequestQuery = any> {
-  (req: Request<P, RequestBody, RequestQuery>, res: Response<ResponseBody>, next: Next): any;
+interface IHandler<P extends RouteParams = IParamsFormat, ResponseBody = any, IRequestBody = any, IRequestQuery = any> {
+  (req: IRequest<P, IRequestBody, IRequestQuery>, res: IResponse<ResponseBody>, next: INext): any;
 }
 
-type ErrorHandler<P extends RouteParams = ParamsFormat, ResponseBody = any, RequestBody = any, RequestQuery = any> = (err: any, req: Request<P, RequestBody, RequestQuery>, res: Response<ResponseBody>, next: Next) => any;
+type IErrorHandler<P extends RouteParams = IParamsFormat, ResponseBody = any, IRequestBody = any, IRequestQuery = any> = (err: any, req: IRequest<P, IRequestBody, IRequestQuery>, res: IResponse<ResponseBody>, next: INext) => any;
 
 type PathParams = string | RegExp | Array<string | RegExp>;
 
-type HandlerParams<P extends RouteParams = ParamsFormat, ResponseBody = any, RequestBody = any, RequestQuery = any>
-  = Handler<P, ResponseBody, RequestBody>
-  | ErrorHandler<P, ResponseBody, RequestBody, RequestQuery>
-  | Array<Handler<P>
-  | ErrorHandler<P>>;
+type IHandlerParams<P extends RouteParams = IParamsFormat, ResponseBody = any, IRequestBody = any, IRequestQuery = any>
+  = IHandler<P, ResponseBody, IRequestBody>
+  | IErrorHandler<P, ResponseBody, IRequestBody, IRequestQuery>
+  | Array<IHandler<P>
+  | IErrorHandler<P>>;
 
-interface CreateRouter<T> {
-  <P extends RouteParams = ParamsFormat, ResponseBody = any, RequestBody = any, RequestQuery= any>(path: PathParams, ...handlers: Array<Handler<P, ResponseBody, RequestBody, RequestQuery>>): T;
-  <P extends RouteParams = ParamsFormat, ResponseBody = any, RequestBody = any, RequestQuery = any>(path: PathParams, ...handlers: Array<HandlerParams<P, ResponseBody, RequestBody, RequestQuery>>): T;
+interface ICreateRouter<T> {
+  <P extends RouteParams = IParamsFormat, ResponseBody = any, IRequestBody = any, IRequestQuery= any>(path: PathParams, ...handlers: Array<IHandler<P, ResponseBody, IRequestBody, IRequestQuery>>): T;
+  <P extends RouteParams = IParamsFormat, ResponseBody = any, IRequestBody = any, IRequestQuery = any>(path: PathParams, ...handlers: Array<IHandlerParams<P, ResponseBody, IRequestBody, IRequestQuery>>): T;
   (path: PathParams, orbtyInstance: Orbty): T;
 }
 
-interface RouterHandler<T> {
-  (...handlers: Handler[]): T;
-  (...handlers: HandlerParams[]): T;
+interface IRouterHandler<T> {
+  (...handlers: IHandler[]): T;
+  (...handlers: IHandlerParams[]): T;
 }
 
 declare class Router {
-  get: CreateRouter<this>;
-  post: CreateRouter<this>;
-  put: CreateRouter<this>;
-  head: CreateRouter<this>;
-  move: CreateRouter<this>;
-  delete: CreateRouter<this>;
-  patch: CreateRouter<this>;
-  all: CreateRouter<this>;
-  options: CreateRouter<this>;
-  purge: CreateRouter<this>;
-  report: CreateRouter<this>;
-  "m-search": CreateRouter<this>;
-  notify: CreateRouter<this>;
-  checkout: CreateRouter<this>;
-  copy: CreateRouter<this>;
-  lock: CreateRouter<this>;
-  trace: CreateRouter<this>;
-  unlock: CreateRouter<this>;
-  unsubscribe: CreateRouter<this>;
-  merge: CreateRouter<this>;
-  mkactivity: CreateRouter<this>;
-  mkcol: CreateRouter<this>;
-  search: CreateRouter<this>;
-  subscribe: CreateRouter<this>;
+  get: ICreateRouter<this>;
+  post: ICreateRouter<this>;
+  put: ICreateRouter<this>;
+  head: ICreateRouter<this>;
+  move: ICreateRouter<this>;
+  delete: ICreateRouter<this>;
+  patch: ICreateRouter<this>;
+  all: ICreateRouter<this>;
+  options: ICreateRouter<this>;
+  purge: ICreateRouter<this>;
+  report: ICreateRouter<this>;
+  "m-search": ICreateRouter<this>;
+  notify: ICreateRouter<this>;
+  checkout: ICreateRouter<this>;
+  copy: ICreateRouter<this>;
+  lock: ICreateRouter<this>;
+  trace: ICreateRouter<this>;
+  unlock: ICreateRouter<this>;
+  unsubscribe: ICreateRouter<this>;
+  merge: ICreateRouter<this>;
+  mkactivity: ICreateRouter<this>;
+  mkcol: ICreateRouter<this>;
+  search: ICreateRouter<this>;
+  subscribe: ICreateRouter<this>;
 }
 
 declare class Orbty extends Router {
@@ -137,13 +128,12 @@ declare class Orbty extends Router {
   static json: typeof json;
   static raw: typeof raw;
   static static: typeof serveStatic;
-  static env: Environment;
-  static Request: Request;
-  static Response: Response;
-  static HttpException: HttpException;
+  static env: IEnvironment;
+  static Request: IRequest;
+  static Response: IResponse;
 
-  error(handler: ErrorHandler): void;
-  use: RouterHandler<this> & CreateRouter<this>;
+  error(handler: IErrorHandler): void;
+  use: IRouterHandler<this> & ICreateRouter<this>;
   match(method: string, pathname: string): any;
   server(): (req: http.IncomingMessage, res: http.ServerResponse, ctx?: any) => void
   handler(req: http.IncomingMessage, res: http.ServerResponse, ctx?: any): void;
@@ -157,6 +147,28 @@ declare class Orbty extends Router {
   listen(options: ListenOptions, listeningListener?: () => void): http.Server;
   listen(handle: any, backlog?: number, listeningListener?: () => void): http.Server;
   listen(handle: any, listeningListener?: () => void): http.Server;
+}
+
+declare namespace Orbty {
+  export interface Response extends IResponse {}
+  export interface Request extends IRequest {}
+  export interface Environment extends IEnvironment {}
+  export interface Next extends INext {}
+  export interface ParamsFormat extends IParamsFormat {}
+  export interface Sender extends ISender {}
+  export interface Handler extends IHandler {}
+  export interface ErrorHandler extends IErrorHandler {}
+  export interface CreateRouter<T> extends ICreateRouter<T> {}
+  export interface RouterHandler<T> extends IRouterHandler<T> {}
+
+  export class HttpException {
+
+    name: string;
+    code: number;
+    message: string;
+
+    constructor(message: string, statusCode: number);
+  }
 }
 
 export = Orbty;
