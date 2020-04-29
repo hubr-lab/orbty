@@ -151,7 +151,10 @@ declare class Orbty extends Router {
 
 declare namespace Orbty {
   export interface Response extends IResponse {}
-  export interface Request extends IRequest {}
+  export interface Request extends IRequest {
+    context: any
+  }
+
   export interface Environment extends IEnvironment {}
   export interface Next extends INext {}
   export interface ParamsFormat extends IParamsFormat {}
