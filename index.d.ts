@@ -54,6 +54,7 @@ declare interface IRequest<P extends RouteParams = IParamsFormat, IRequestBody =
   params: P;
   body: IRequestBody;
   query: IRequestQuery;
+  context: any;
 }
 
 declare interface IResponse<ResponseBody = any> extends http.ServerResponse {
@@ -151,9 +152,7 @@ declare class Orbty extends Router {
 
 declare namespace Orbty {
   export interface Response extends IResponse {}
-  export interface Request extends IRequest {
-    context: any
-  }
+  export interface Request extends IRequest {}
 
   export interface Environment extends IEnvironment {}
   export interface Next extends INext {}
