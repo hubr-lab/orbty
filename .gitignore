@@ -6,3 +6,4 @@ coverage
 *.log
 .editorconfig
 package-lock.json
+.vscode
