@@ -49,6 +49,9 @@ declare interface IRequest<P extends RouteParams = IParamsFormat, IRequestBody =
   header(headerName: string): string | string[] | undefined;
   host: string;
   language: string;
+  baseUrl: string;
+  next: () => void
+  originalUrl: string;
   accept: string;
   agent: string;
   params: P;
