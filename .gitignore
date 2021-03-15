@@ -7,3 +7,4 @@ coverage
 .editorconfig
 package-lock.json
 .vscode
+.history
