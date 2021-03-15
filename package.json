@@ -1,6 +1,6 @@
 {
   "name": "orbty",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Simple and high performance web server structure for",
   "author": {
     "name": "Gleisson Ricardo",
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@types/body-parser": "^1.19.0",
-    "@types/serve-static": "^1.13.3",
+    "@types/serve-static": "^1.13.9",
     "body-parser": "^1.19.0",
     "serve-static": "^1.14.1"
   }
