@@ -169,20 +169,6 @@ orbty.use(Orbty.static(`${__dirname}/photos`));
 We currently have a separate Cache management module for Orbty and also compatible with Express.
 Check [orbty-http-cache](https://www.npmjs.com/package/orbty-http-cache).
 
-## Util
-
-### Environment control
-
-
-Read your environment variables using the env static method. It will validate the mandatory variables and will not let your application start if a specific mandatory variable has not been defined.
-
-```js
-const { env } = require("orbty");
-console.log(env.ENVIRONMENT);
-// An error will be thrown if this variable has not been defined.
-
-```
-
 ## Orbty instancies
 
 An Orbty instance acts as a router.

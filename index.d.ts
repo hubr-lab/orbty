@@ -11,10 +11,6 @@ import serveStatic from "serve-static";
 import http from "http";
 import url from "url";
 
-interface IEnvironment {
-  [key: string]: string;
-}
-
 interface INext {
   (): void;
 }
@@ -132,7 +128,6 @@ declare class Orbty extends Router {
   static json: typeof json;
   static raw: typeof raw;
   static static: typeof serveStatic;
-  static env: IEnvironment;
   static Request: IRequest;
   static Response: IResponse;
 
@@ -157,7 +152,6 @@ declare namespace Orbty {
   export interface Response extends IResponse {}
   export interface Request extends IRequest {}
 
-  export interface Environment extends IEnvironment {}
   export interface Next extends INext {}
   export interface ParamsFormat extends IParamsFormat {}
   export interface Sender extends ISender {}
