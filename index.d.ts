@@ -40,7 +40,8 @@ type RouteParams = IParamsFormat | ParamsArray;
 
 declare interface IRequest<P extends RouteParams = IParamsFormat, IRequestBody = any, IRequestQuery = any> extends http.IncomingMessage {
   getUrlParser(): url.UrlWithParsedQuery;
-  getCurrentIRequestTime(): number;
+  getCurrentRequestTime(): number;
+  latency(): number;
   initialTime: number;
   header(headerName: string): string | string[] | undefined;
   host: string;

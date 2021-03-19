@@ -1,13 +1,13 @@
 const Orbty = require("..");
 const request = require("supertest");
 
-describe("Request current time", () => {
+describe("Request latency", () => {
 
   test("Should current type diff number", (done) => {
     const orbty = new Orbty();
 
     orbty.get("/foo", (req) => {
-      return req.getCurrentRequestTime();
+      return req.latency();
     });
 
     request(orbty.server())
