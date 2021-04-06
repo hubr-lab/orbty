@@ -94,7 +94,7 @@ interface IRouterHandler<T> {
   (...handlers: IHandlerParams[]): T;
 }
 
-declare class Router {
+declare class Router extends http.Server {
   get: ICreateRouter<this>;
   post: ICreateRouter<this>;
   put: ICreateRouter<this>;
@@ -137,16 +137,6 @@ declare class Orbty extends Router {
   match(method: string, pathname: string): any;
   server(): (req: http.IncomingMessage, res: http.ServerResponse, ctx?: any) => void
   handler(req: http.IncomingMessage, res: http.ServerResponse, ctx?: any): void;
-
-  listen(port?: number, hostname?: string, backlog?: number, listeningListener?: () => void): http.Server;
-  listen(port?: number, hostname?: string, listeningListener?: () => void): http.Server;
-  listen(port?: number, backlog?: number, listeningListener?: () => void): http.Server;
-  listen(port?: number, listeningListener?: () => void): http.Server;
-  listen(path: string, backlog?: number, listeningListener?: () => void): http.Server;
-  listen(path: string, listeningListener?: () => void): http.Server;
-  listen(options: ListenOptions, listeningListener?: () => void): http.Server;
-  listen(handle: any, backlog?: number, listeningListener?: () => void): http.Server;
-  listen(handle: any, listeningListener?: () => void): http.Server;
 }
 
 declare namespace Orbty {
